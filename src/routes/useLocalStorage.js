@@ -14,7 +14,6 @@ function useLocalStorage(itemName, initialValue) {
     type: actionTypes.error,
     payload: error,
   });
-
   const onSuccess = (item) => dispatch({
     type: actionTypes.success,
     payload: item,
