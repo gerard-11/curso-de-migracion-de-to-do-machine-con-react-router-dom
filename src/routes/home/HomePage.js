@@ -1,4 +1,5 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 import {ChangeAlert} from '../../UI/ChangeAlert';
 import {CreateTodoButton} from '../../UI/CreateTodoButton';
 import {EmptyTodos} from '../../UI/EmptyTodos';
@@ -14,6 +15,7 @@ import {TodosLoading} from '../../UI/TodosLoading';
 import {useTodos} from '../useTodos';
 
 function HomePage() {
+    const navigate=useNavigate();
     const { state, stateUpdaters } = useTodos();
 
     const {
@@ -22,13 +24,13 @@ function HomePage() {
         searchedTodos,
         totalTodos,
         completedTodos,
-        openModal,
+        //openModal,
         searchValue,
     } = state;
 
     const {
-        setOpenModal,
-        addTodo,
+        //setOpenModal,
+       // addTodo,
         completeTodo,
         deleteTodo,
         setSearchValue,
@@ -63,27 +65,34 @@ function HomePage() {
             >
                 {todo => (
                     <TodoItem
-                        key={todo.text}
+                        key={todo.id}
                         text={todo.text}
                         completed={todo.completed}
-                        onComplete={() => completeTodo(todo.text)}
-                        onEdit={() => console.log('editando....')}
-                        onDelete={() => deleteTodo(todo.text)}
+                        onEdit={() =>
+                            navigate(
+                                '/edit/' + todo.id,
+                            {
+                                    state:{ todo }
+                            }
+                        )}
+                        onComplete={() => completeTodo(todo.id)}
+                        onDelete={() => deleteTodo(todo.id)}
                     />
                 )}
             </TodoList>
 
-            {!!openModal && (
+         {/*   {!!openModal && (
                 <Modal>
                     <TodoForm
                         addTodo={addTodo}
                         setOpenModal={setOpenModal}
                     />
                 </Modal>
-            )}
+            )}*/}
 
             <CreateTodoButton
-                setOpenModal={setOpenModal}
+                onClick={()=>navigate('/new')}
+                //setOpenModal={setOpenModal}
             />
 
             <ChangeAlert
