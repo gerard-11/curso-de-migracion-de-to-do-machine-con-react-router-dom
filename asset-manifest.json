@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/css/main.45eb4d6b.css",
+    "main.js": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/js/main.34200454.js",
+    "index.html": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/index.html",
+    "static/media/delete.svg": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/media/edit.c6ea32e4757fe06fc8a43fe007ef181b.svg",
+    "static/media/check.svg": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.45eb4d6b.css.map": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/css/main.45eb4d6b.css.map",
+    "main.34200454.js.map": "/curso-de-migracion-de-to-do-machine-con-react-router-dom/static/js/main.34200454.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45eb4d6b.css",
+    "static/js/main.34200454.js"
+  ]
+}
